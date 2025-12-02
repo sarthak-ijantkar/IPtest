@@ -4,12 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/IPtest/",     // <-- REQUIRED FOR GITHUB PAGES
   plugins: [
     react(),
     tailwindcss()
   ],
   server: {
     host: true,       // Allows access from your LAN (mobile devices)
-    port: 5173,       // Optional, keeps your port consistent
+    port: 5173        // Optional
   }
 })

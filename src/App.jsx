@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
   const headingLine1 = useRef(null);
   const headingLine2 = useRef(null);
   const iconRef = useRef(null);
@@ -95,8 +98,9 @@ function App() {
           </span>
         </h2>
 
-        {/* Button */}
+        {/* Button with ROUTE */}
         <button
+          onClick={() => navigate("/ping")}
           className="btn mt-14 px-12 py-4 rounded-xl text-lg transition-all bg-black border-2 border-black"
         >
           Make your first ping
